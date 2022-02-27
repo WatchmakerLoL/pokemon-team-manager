@@ -22,3 +22,9 @@ class Pokemon(models.Model):
         else:
             raise Exception(f'{self.team.name} is full!')
 
+    def get_name(self):
+        return self.nickname
+
+    def __str__(self):
+        return '{} - owner: {}'.format(self.get_name(), self.team.trainer.get_name())
+

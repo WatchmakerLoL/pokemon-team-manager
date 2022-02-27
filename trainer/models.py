@@ -1,9 +1,6 @@
 from django.db import models
 
-
-# Create your models here.
 from trainer.constants import POKEMON_TRAINER_GENDERS
-
 
 class Trainer(models.Model):
 

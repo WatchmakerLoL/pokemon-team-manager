@@ -35,6 +35,7 @@ class PokemonViewset(viewsets.ModelViewSet):
             new_pokemon_data = {
                 **serializer.data,
                 "name": pokemon_data['name'],
+                "nickname": serializer.data['nickname'] if serializer.data['nickname'] is not None and serializer.data['nickname'] != '' else pokemon_data['name'],
                 "national_number": pokemon_data['id']
             }
 
