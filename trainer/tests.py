@@ -6,6 +6,10 @@ from trainer.models import Trainer
 
 class TestTrainerEndpoint(APITestCase):
 
+    """
+    Test Create and List APIs - Trainer
+    """
+
     def test_create_trainers(self):
         try:
             response = self.client.post('/trainers/', { "name" : "Trainer", "age": 10, "gender": "M"}, format='json')

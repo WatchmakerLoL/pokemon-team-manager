@@ -7,6 +7,10 @@ from trainer.models import Trainer
 
 class TestTeamEndpoint(APITestCase):
 
+    """
+    Test Create and List APIs - Team
+    """
+
     def setUp(self):
         self.trainer = Trainer.objects.create(name="Trainer", age=10, gender="M")
 

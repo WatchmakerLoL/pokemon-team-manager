@@ -8,6 +8,10 @@ from team.models import Team
 
 class TestPokemonEndpoint(APITestCase):
 
+    """
+    Test Create and List APIs - Pokemon
+    """
+
     def setUp(self):
         self.trainer = Trainer.objects.create(name="Trainer", age=10, gender="M")
         self.team = Team.objects.create(name="Team", description="description", trainer=self.trainer)
