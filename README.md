@@ -9,6 +9,8 @@ This project is a technical exercise provided by an employer.
 This project is available on Github. Clone with your prefered git tool or with the command:
 
 ` git clone https://github.com/WatchmakerLoL/pokemon-team-manager.git `
+
+
 2. Set up a virtual environment and activate it.
 
 Go to a folder outside the project and create the virtualenv using the following command:
@@ -19,7 +21,7 @@ Then you should activate it by running the following command inside the virtuale
 
 ` activate `
 
-4. Install dependencies from requirements.txt.
+3. Install dependencies from requirements.txt.
 
 Go back to repo's root and run the following command:
 
