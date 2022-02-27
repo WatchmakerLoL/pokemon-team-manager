@@ -71,6 +71,26 @@ And if we wanted to create a new trainer we would post to that same url the foll
 >  "gender": "M"
 > }
 
+### To add a Pokemon
+
+We use the following API to retrieve pokemon data:
+
+> https://pokeapi.co/
+
+To add a pokemon to a team we have to make a POST request to 'pokemons/' specifying either the name or the national number of the pokemon.
+
+> { "name": 1, team: "1"}
+
+Will then create:
+
+>{
+>        "id": 1,
+>        "name": "bulbasaur",
+>        "nickname": "bulbasaur",
+>        "national_number": 1,
+>        "team": 1
+>    }
+
 ## Technical Stack.
 
 
