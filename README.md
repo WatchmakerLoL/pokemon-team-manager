@@ -37,7 +37,13 @@ This project uses environment variables to configure database connection. Go to
 
 Change the variables to point to your postgresql database. In this example "pokemon_manager"
 
-5. Run the server.
+5. Run migrations.
+
+Build the database schema with the following command:
+
+` python manage.py migrate `
+
+7. Run the server.
 
 ` python manage.py runserver `
 
@@ -79,9 +85,12 @@ We use the following API to retrieve pokemon data:
 
 > https://pokeapi.co/
 
-To add a pokemon to a team we have to make a POST request to 'pokemons/' specifying either the name or the national number of the pokemon.
+To add a pokemon to a team we have to make a POST request to 'pokemons/' 
+specifying either the name or the national number of the pokemon on the field *name*.
 
 > { "name": 1, team: "1"}
+
+> { "name": "bulbasaur", team: "1"}
 
 Will then create:
 
