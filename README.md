@@ -99,7 +99,8 @@ Will then create:
 >        "name": "bulbasaur",
 >        "nickname": "bulbasaur",
 >        "national_number": 1,
->        "team": 1
+>        "team": 1,
+>        "type": "grass"
 >    }
 
 ## Technical Stack.
