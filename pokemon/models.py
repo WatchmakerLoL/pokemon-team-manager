@@ -14,6 +14,7 @@ class Pokemon(models.Model):
     nickname = models.TextField(max_length=255, null=True, blank=True)
     national_number = models.IntegerField(null=True)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    type = models.CharField(max_length=255, null=True, blank=True)
 
     def save(self, *args, **kwargs):
 
