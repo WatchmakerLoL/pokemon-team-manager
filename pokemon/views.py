@@ -40,12 +40,12 @@ class PokemonViewset(viewsets.ModelViewSet):
 
         if pokemon_data:
             new_pokemon_data = {
-                **request.data,
-                "name": pokemon_data['name'],
+                "name": pokemon_data.get('name'),
                 "nickname": request.data.get('nickname') if request.data.get('nickname', None) is not None
                                                             and request.data.get('nickname') != '' else pokemon_data['name'],
                 "national_number": pokemon_data['id'],
-                "type": ", ".join(typing.get('type').get('name', None) for typing in pokemon_data['types'])
+                "type": ", ".join(typing.get('type').get('name', None) for typing in pokemon_data['types']),
+                "team": request.data.get('team')
             }
 
             serializer = PokemonSerializer(data=new_pokemon_data)
